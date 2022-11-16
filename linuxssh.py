@@ -43,9 +43,7 @@ class LinuxSSH:
         self.check_connection()
         command = f"sudo -S -p '' {command}"
         stdin, stdout, stderr = self.session.exec_command(command)
-        if (
-            self.require_password
-        ):  # Enters password if password is expected in order to run sudo command
+        if self.require_password:  # Enters password if password is expected in order to run sudo command
             stdin.write(self.connect_kwargs["password"] + "\n")
             stdin.flush()
         return BashStreams(stdout, stderr, stdout.channel.recv_exit_status())
