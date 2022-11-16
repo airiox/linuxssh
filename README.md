@@ -1,5 +1,5 @@
 # linuxssh
-Lightweight Python SSH interface for Linux built around paramiko. Provides with stdout, stderr and the exist status of the process. Also allows for sudo access. 
+Lightweight Python SSH interface for Linux built around paramiko. Provides stdout, stderr and the exit status of the process. Also allows for sudo access. 
 
 Example: 
 
